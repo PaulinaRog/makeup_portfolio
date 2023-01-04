@@ -5,7 +5,7 @@ import "./src/styles/main.scss";
 import { createRoot } from "react-dom/client";
 import AboutMePage from "./src/views/AboutMePage";
 import PortfolioPage from "./src/views/PortfolioPage";
-import Contact from "./src/components/nav/Contact";
+import ContactPage from "./src/views/ContactPage";
 
 export default function App() {
   return (
@@ -13,9 +13,9 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/aboutme" element={<AboutMePage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="aboutme" element={<AboutMePage />} />
+          <Route path="portfolio" element={<PortfolioPage />} />
+          <Route path="contact" element={<ContactPage />} />
         </Routes>
       </BrowserRouter>
     </>

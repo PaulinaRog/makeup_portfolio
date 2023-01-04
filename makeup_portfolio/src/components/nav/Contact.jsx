@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 export default function Contact() {
   const [style, setStyle] = useState(null);
@@ -30,19 +30,21 @@ export default function Contact() {
   };
 
   return (
-    <NavLink to="/contact">
-      <div
-        onMouseOver={handleMouseEnterUser}
-        onMouseLeave={handleMouseLeaveUser}
-        className="nav-elem"
-        style={style && style}
-      >
-        <p>
-          <i className="fa-regular fa-envelope nav-icon"></i>
+    <>
+      <NavLink to="/contact">
+        <div
+          onMouseOver={handleMouseEnterUser}
+          onMouseLeave={handleMouseLeaveUser}
+          className="nav-elem"
+          style={style && style}
+        >
+          <p>
+            <i className="fa-regular fa-envelope nav-icon"></i>
 
-          <span style={spanStyle}>CONTACT</span>
-        </p>
-      </div>
-    </NavLink>
+            <span style={spanStyle}>CONTACT</span>
+          </p>
+        </div>
+      </NavLink>
+    </>
   );
 }

@@ -1,0 +1,68 @@
+.index {
+  background-color: $grey-backgrounds;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  &-container {
+    width: 80%;
+    height: 50%;
+    position: relative;
+    left: 10%;
+    top: 30vh;
+    @include tablet {
+      top: 25vh;
+      height: 60%;
+      width: 65%;
+      left: 25%;
+    }
+    @include desktops {
+      width: 30%;
+      height: 80%;
+      top: 10vh;
+      left: 42%;
+    }
+  }
+
+  &-photo {
+    width: 90%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &-header {
+    z-index: 5;
+    position: absolute;
+    top: 10%;
+    width: 55%;
+    text-align: right;
+    right: 10%;
+    @include tablet {
+      width: 40%;
+      top: 10%;
+    }
+    @include desktops {
+      z-index: 5;
+      position: absolute;
+      top: 40%;
+      width: 20%;
+      text-align: right;
+      left: 20%;
+    }
+    &-title {
+      text-shadow: 2px 2px 4px black;
+    }
+  }
+}
+
+.decor {
+  border: 0.1em solid $grey-light;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+}

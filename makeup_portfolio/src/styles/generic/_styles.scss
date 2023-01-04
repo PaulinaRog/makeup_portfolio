@@ -1,0 +1,36 @@
+body {
+  font-family: $font-headers;
+  box-sizing: border-box;
+  color: $grey-light;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 200%;
+  color: $yellow-elements;
+  @include tablet {
+    font-size: 300%;
+  }
+  @include desktops {
+    font-size: 300%;
+  }
+}
+a {
+  color: $grey-light;
+  text-decoration: none;
+
+  &:visited {
+    color: $grey-transparent;
+  }
+
+  &:hover {
+    color: $yellow-elements;
+  }
+  &:focus {
+    color: $yellow-elements;
+  }
+
+  &:active {
+    color: $yellow-active-link;
+  }
+}

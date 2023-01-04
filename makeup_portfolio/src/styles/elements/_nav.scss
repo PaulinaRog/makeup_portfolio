@@ -1,0 +1,123 @@
+.nav {
+  height: 7vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  outline: 2px solid $grey-transparent;
+  outline-offset: 4px;
+  display: flex;
+  justify-content: space-between;
+  @include desktops {
+    height: 100vh;
+    width: 5vw;
+    flex-direction: column;
+    outline: none;
+  }
+
+  &-page {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1em;
+    @include desktops {
+      flex-direction: column;
+      align-items: unset;
+      justify-content: space-between;
+      height: 30%;
+      margin-top: 2em;
+    }
+  }
+  &-sm {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1em;
+    @include tablet {
+      width: 10%;
+    }
+    @include desktops {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 10%;
+      margin-bottom: 2em;
+    }
+  }
+  &-elem {
+    width: 1.8em;
+    height: 1.8em;
+    background-color: $grey-transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    box-shadow: $shadow-small-elems;
+    @include desktops {
+      width: 1.8em;
+      height: 1.8em;
+      background-color: $grey-transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      box-shadow: $shadow-small-elems;
+    }
+  }
+  &-icon {
+    color: $grey-light;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: $grey-light;
+    @include desktops {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      color: $grey-light;
+    }
+  }
+}
+
+@keyframes expand {
+  from {
+    width: 1.8em;
+    height: 1.8em;
+    background-color: $grey-transparent;
+    box-shadow: $shadow-small-elems;
+  }
+  to {
+    width: 170px;
+    background-color: $yellow-elements;
+    color: black;
+    box-shadow: $shadow-yellow-elems;
+  }
+}
+
+@keyframes appear {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  30% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  from {
+    width: 170px;
+    background-color: $yellow-elements;
+    border-radius: 20px;
+  }
+  to {
+    width: 1.8em;
+    height: 1.8em;
+    background-color: $grey-transparent;
+    border-radius: 30%;
+  }
+}

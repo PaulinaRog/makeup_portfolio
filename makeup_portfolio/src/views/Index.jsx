@@ -1,11 +1,12 @@
 import React from "react";
 import LeftNav from "../components/nav/LeftNav";
+import Gosia from "../assets/gosia_main.png";
 
 export default function Index() {
   return (
     <div className="index">
       <div className="index-container">
-        <img src="./src/assets/gosia_main.png" className="index-photo" />
+        <img src={Gosia} className="index-photo" />
         <div className="decor"></div>
       </div>
       <div className="index-header">

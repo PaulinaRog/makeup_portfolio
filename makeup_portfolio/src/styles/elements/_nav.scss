@@ -46,13 +46,6 @@
     }
   }
   &-elem {
-    width: 1.8em;
-    height: 1.8em;
-    background-color: $grey-transparent;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-    box-shadow: $shadow-small-elems;
     @include desktops {
       width: 1.8em;
       height: 1.8em;
@@ -64,11 +57,6 @@
     }
   }
   &-icon {
-    color: $grey-light;
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    color: $grey-light;
     @include desktops {
       position: absolute;
       top: 8px;

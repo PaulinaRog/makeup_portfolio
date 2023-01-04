@@ -30,7 +30,7 @@ export default function Portfolio() {
   };
 
   return (
-    <NavLink>
+    <NavLink to="/portfolio">
       <div
         onMouseOver={handleMouseEnterUser}
         onMouseLeave={handleMouseLeaveUser}

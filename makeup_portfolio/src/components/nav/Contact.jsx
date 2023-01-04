@@ -30,7 +30,7 @@ export default function Contact() {
   };
 
   return (
-    <NavLink>
+    <NavLink to="/contact">
       <div
         onMouseOver={handleMouseEnterUser}
         onMouseLeave={handleMouseLeaveUser}

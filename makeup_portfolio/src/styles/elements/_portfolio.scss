@@ -5,7 +5,7 @@
   position: relative;
 
   &-next-page {
-    position: absolute;
+    position: fixed;
     right: 3em;
     bottom: 4em;
     cursor: pointer;
@@ -17,7 +17,7 @@
   }
 
   &-prev-page {
-    position: absolute;
+    position: fixed;
     left: 3em;
     bottom: 4em;
     cursor: pointer;

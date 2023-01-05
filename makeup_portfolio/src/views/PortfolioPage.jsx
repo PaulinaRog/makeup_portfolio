@@ -34,16 +34,16 @@ export default function PortfolioPage() {
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
       />
-      <div className="portfolio-button-next">
+      <button className="portfolio-button-next">
         <a className="portfolio-next-page" onClick={handleClick}>
           Next
         </a>
-      </div>
-      <div className="portfolio-button-prev">
+      </button>
+      <button className="portfolio-button-prev">
         <a className="portfolio-prev-page" onClick={handleClickRev}>
           Prev
         </a>
-      </div>
+      </button>
     </div>
   );
 }

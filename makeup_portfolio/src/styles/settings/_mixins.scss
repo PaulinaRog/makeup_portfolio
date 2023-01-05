@@ -21,6 +21,9 @@
   padding: $padding;
   border-radius: 1em;
   box-shadow: $shadow-small-elems;
+  border: none;
+  background-color: $grey-backgrounds;
+  font-family: $font-headers;
 
   &:active {
     box-shadow: $shadow-small-elems, $shadow-clicked;

@@ -18,6 +18,7 @@ export default function Portfolio() {
       position: "absolute",
       paddingTop: 10,
       animation: "appear ease-out 1s",
+      color: "#b2ab76",
     });
   };
 

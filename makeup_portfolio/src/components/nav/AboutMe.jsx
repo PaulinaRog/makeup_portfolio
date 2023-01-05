@@ -16,8 +16,9 @@ export default function AboutMe() {
       fontSize: 16,
       paddingLeft: "3em",
       position: "absolute",
-      paddingTop: 10,
+      paddingTop: 8,
       animation: "appear ease-out 1s",
+      color: "#b2ab76",
     });
   };
 
@@ -28,7 +29,7 @@ export default function AboutMe() {
 
   return (
     <NavLink to="/aboutme">
-      <div
+      <button
         onMouseOver={handleMouseEnterUser}
         onMouseLeave={handleMouseLeaveUser}
         className="nav-elem"
@@ -38,7 +39,7 @@ export default function AboutMe() {
           <i className="fa-regular fa-user nav-icon"></i>
           <span style={spanStyle}>ABOUT ME</span>
         </p>
-      </div>
+      </button>
     </NavLink>
   );
 }

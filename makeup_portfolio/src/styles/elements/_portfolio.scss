@@ -4,26 +4,25 @@
   height: 100vh;
   position: relative;
 
-  &-next-page {
+  &-button-prev {
+    @include button(0.5em 1em);
     position: fixed;
-    right: 3em;
+    left: 3em;
     bottom: 4em;
-    cursor: pointer;
-
     @include desktops {
-      right: 10em;
+      left: 10em;
       bottom: 5em;
     }
   }
 
-  &-prev-page {
+  &-button-next {
+    @include button(0.5em 1em);
     position: fixed;
-    left: 3em;
+    right: 3em;
     bottom: 4em;
-    cursor: pointer;
 
     @include desktops {
-      left: 10em;
+      right: 10em;
       bottom: 5em;
     }
   }

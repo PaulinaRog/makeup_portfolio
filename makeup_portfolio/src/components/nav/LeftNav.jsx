@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import AboutMe from "./AboutMe";
 import Contact from "./Contact";
 import Portfolio from "./Portfolio";
@@ -8,6 +9,9 @@ export default function LeftNav() {
     <>
       <div className="nav">
         <div className="nav-page">
+          <NavLink to="/">
+            <h2>G</h2>
+          </NavLink>
           <AboutMe />
           <Portfolio />
           <Contact />

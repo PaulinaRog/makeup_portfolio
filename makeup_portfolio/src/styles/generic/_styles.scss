@@ -15,6 +15,18 @@ h1 {
     font-size: 300%;
   }
 }
+
+h2 {
+  font-size: 150%;
+  color: $yellow-elements;
+  @include tablet {
+    font-size: 300%;
+  }
+  @include desktops {
+    font-size: 200%;
+  }
+}
+
 a {
   color: $grey-light;
   text-decoration: none;

@@ -9,11 +9,8 @@ export default function Contact() {
     setStyle({
       width: 170,
       borderRadius: 20,
-      backgroundColor: "#b2ab76",
-      color: "black",
       display: "flex",
       animation: "expand linear 0.5s",
-      boxShadow: "5px 3px 5px #000000, -1px -2px 3px #d3cb8d",
     });
     setSpanStyle({
       fontSize: 16,

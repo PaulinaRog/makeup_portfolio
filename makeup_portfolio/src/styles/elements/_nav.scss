@@ -1,10 +1,8 @@
 .nav {
-  height: 7vh;
+  height: 10vh;
   width: 100vw;
   position: absolute;
   top: 0;
-  outline: 2px solid $grey-transparent;
-  outline-offset: 4px;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -17,28 +15,34 @@
 
   &-page {
     display: flex;
-    width: 40%;
-    justify-content: space-between;
+    width: 50%;
+    gap: 0.8em;
     align-items: center;
     margin-left: 1em;
+    @include tablet {
+      gap: 2em;
+    }
     @include desktops {
       flex-direction: column;
       align-items: unset;
       justify-content: space-between;
       height: 30%;
-      margin-top: 2em;
+      margin-top: 1em;
+      gap: 3em;
     }
   }
   &-sm {
-    display: flex;
+    display: none;
     width: 20%;
-    justify-content: space-between;
+    gap: 2em;
     align-items: center;
     margin-right: 1em;
     @include tablet {
+      display: flex;
       width: 10%;
     }
     @include desktops {
+      display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
@@ -47,23 +51,18 @@
     }
   }
   &-elem {
-    @include desktops {
-      width: 1.8em;
-      height: 1.8em;
-      background-color: $grey-transparent;
-      border-radius: 50%;
-      cursor: pointer;
-      position: relative;
-      box-shadow: $shadow-small-elems;
-    }
+    width: 1.8em;
+    height: 1.8em;
+    @include button(0);
+    cursor: pointer;
+    position: relative;
+    box-shadow: $shadow-small-elems;
   }
   &-icon {
-    @include desktops {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      color: $grey-light;
-    }
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: $grey-light;
   }
 }
 
@@ -71,14 +70,11 @@
   from {
     width: 1.8em;
     height: 1.8em;
-    background-color: $grey-transparent;
     box-shadow: $shadow-small-elems;
   }
   to {
     width: 170px;
-    background-color: $yellow-elements;
-    color: black;
-    box-shadow: $shadow-yellow-elems;
+    color: $grey-light;
   }
 }
 
@@ -100,13 +96,11 @@
 @keyframes hide {
   from {
     width: 170px;
-    background-color: $yellow-elements;
     border-radius: 20px;
   }
   to {
     width: 1.8em;
     height: 1.8em;
-    background-color: $grey-transparent;
     border-radius: 30%;
   }
 }

@@ -15,3 +15,14 @@
     @content;
   }
 }
+
+@mixin button($padding) {
+  cursor: pointer;
+  padding: $padding;
+  border-radius: 1em;
+  box-shadow: $shadow-small-elems;
+
+  &:active {
+    box-shadow: $shadow-small-elems, $shadow-clicked;
+  }
+}

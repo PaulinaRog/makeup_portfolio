@@ -79,8 +79,8 @@ export default function ContactPage() {
     });
     if (screenWidth <= 460) {
       setContainer({ animation: "circles-mob linear 1s" });
-      setContainer2({ animation: "circles2-mob linear 1.5s" });
-      setContainer3({ animation: "circles3-mob linear 1.9s" });
+      setContainer2({ animation: "circles2-mob linear 1.4s" });
+      setContainer3({ animation: "circles3-mob linear 1.8s" });
     }
     if (screenWidth <= 960 && screenWidth >= 461) {
       setContainer({ animation: "circles-tab linear 1s" });
@@ -101,7 +101,7 @@ export default function ContactPage() {
       <LeftNav />
       <div className="contact" style={container ? container : null}>
         <div className="contact-2" style={container2 ? container2 : null}>
-          <div className="contact-3" style={container2 ? container2 : null}>
+          <div className="contact-3" style={container3 ? container3 : null}>
             <div className="contact-4">
               {text ? <p className="contact-message-sent">{text}</p> : null}
               <form className="contact-form" style={form ? form : null}>

@@ -4,6 +4,7 @@ export default function PagesNav({
   setActiveTab,
   setCurrentPage,
   currentPage,
+  setNum,
 }) {
   return (
     <div className="portfolio-pages-nav">
@@ -12,7 +13,7 @@ export default function PagesNav({
         className="portfolio-pages-nav-dot"
         onClick={() => {
           setCurrentPage(1);
-          setActiveTab(1);
+          setNum(1);
         }}
       ></div>
       <div
@@ -20,7 +21,7 @@ export default function PagesNav({
         className="portfolio-pages-nav-dot"
         onClick={() => {
           setCurrentPage(2);
-          setActiveTab(2);
+          setNum(2);
         }}
       ></div>
       <div
@@ -28,7 +29,7 @@ export default function PagesNav({
         className="portfolio-pages-nav-dot"
         onClick={() => {
           setCurrentPage(3);
-          setActiveTab(3);
+          setNum(3);
         }}
       ></div>
       <div
@@ -36,7 +37,7 @@ export default function PagesNav({
         className="portfolio-pages-nav-dot"
         onClick={() => {
           setCurrentPage(4);
-          setActiveTab(4);
+          setNum(4);
         }}
       ></div>
     </div>

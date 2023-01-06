@@ -8,6 +8,8 @@ body {
 h1 {
   font-size: 200%;
   color: $yellow-elements;
+  text-shadow: 2px 2px 4px black;
+  font-family: $font-headers;
   @include tablet {
     font-size: 300%;
   }

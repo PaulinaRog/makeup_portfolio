@@ -6,11 +6,12 @@ $yellow-elements: #b2ab76;
 $grey-light: #929292;
 $grey-transparent: #92929263;
 $yellow-active-link: #c5b95e;
+$grey-bg-transparent: #2c2c2c;
 
 $mobile-width: 460px;
 $tablet-width: 960px;
 
-$shadow-small-elems: 5px 5px 10px 0 #0d0d0dcd, -2px -2px 10px 0 #a1a1a14b;
+$shadow-small-elems: 5px 5px 10px 0 #0d0d0dcd, -2px -2px 5px 0 #a1a1a14b;
 $shadow-yellow-elems: 5px 5px 10px 0 #0d0d0dcd, -2px -2px 10px 0 #a1a1a189;
 $shadow-clicked: inset 5px 5px 10px 0 #0d0d0dcd,
   inset -2px -2px 10px 0 #a1a1a189;

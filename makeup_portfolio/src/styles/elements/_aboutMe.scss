@@ -1,0 +1,76 @@
+.aboutme {
+  background-color: $grey-backgrounds;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  &-photo {
+    background-image: url(../assets/aboutMeGosia.png);
+    width: 40vw;
+    height: 96vh;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 25%;
+    top: 2%;
+
+    // &-second {
+    //   background-image: url(../assets/aboutMe.png);
+    //   width: 40vw;
+    //   height: 90vh;
+    //   background-repeat: no-repeat;
+    //   position: absolute;
+    //   right: 7%;
+    //   top: 5%;
+    // }
+  }
+
+  &-moving-elem {
+    width: 30vw;
+    height: 96vh;
+    position: absolute;
+    top: 2%;
+    left: 7%;
+    z-index: 3;
+    background-color: $grey-bg-transparent;
+    box-shadow: $shadow-small-elems;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &-moving-elem2 {
+    width: 20vw;
+    height: 96vh;
+    position: absolute;
+    top: 2%;
+    right: 0%;
+    z-index: 3;
+    background-color: $grey-bg-transparent;
+    box-shadow: $shadow-small-elems;
+  }
+  &-moving-elem3 {
+    width: 20vw;
+    height: 96vh;
+    position: absolute;
+    top: 2%;
+    left: 7%;
+    z-index: 2;
+    background-color: $grey-bg-transparent;
+    box-shadow: $shadow-small-elems;
+  }
+
+  &-title {
+    width: 220px;
+    text-align: right;
+    padding: 1em;
+  }
+}
+
+@keyframes move {
+  from {
+    left: 7%;
+  }
+  to {
+    left: 53%;
+  }
+}

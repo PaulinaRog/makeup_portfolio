@@ -10,8 +10,9 @@
     left: 3em;
     bottom: 4em;
     @include desktops {
-      left: 10em;
+      right: 17em;
       bottom: 5em;
+      left: unset;
     }
   }
 
@@ -64,6 +65,7 @@
 
     @include desktops {
       width: 40%;
+      left: 40%;
     }
   }
 }

@@ -79,13 +79,13 @@ export default function ContactPage() {
     });
     if (screenWidth <= 460) {
       setContainer({ animation: "circles-mob linear 1s" });
-      setContainer2({ animation: "circles2-mob linear 1.2s" });
-      setContainer3({ animation: "circles3-mob linear 1.4s" });
+      setContainer2({ animation: "circles2-mob linear 1.5s" });
+      setContainer3({ animation: "circles3-mob linear 1.9s" });
     }
     if (screenWidth <= 960 && screenWidth >= 461) {
       setContainer({ animation: "circles-tab linear 1s" });
-      setContainer2({ animation: "circles2-tab linear 1.2s" });
-      setContainer3({ animation: "circles3-tab linear 1.4s" });
+      setContainer2({ animation: "circles2-tab linear 1.3s" });
+      setContainer3({ animation: "circles3-tab linear 1.6s" });
     }
     if (screenWidth > 960) {
       setContainer({ animation: "circles-desk linear 1s" });

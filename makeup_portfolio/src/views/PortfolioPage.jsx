@@ -50,14 +50,14 @@ export default function PortfolioPage() {
         className="portfolio-button-next"
         style={nextStyle}
       >
-        <a className="portfolio-next-page">Next</a>
+        next
       </button>
       <button
         onClick={handleClickRev}
         className="portfolio-button-prev"
         style={prevStyle}
       >
-        <a className="portfolio-prev-page">Prev</a>
+        prev
       </button>
     </div>
   );

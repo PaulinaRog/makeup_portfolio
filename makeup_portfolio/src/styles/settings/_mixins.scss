@@ -24,9 +24,14 @@
   border: none;
   background-color: $grey-backgrounds;
   font-family: $font-headers;
+  color: $grey-transparent;
 
+  &:hover {
+    color: $yellow-elements;
+  }
   &:active {
     box-shadow: $shadow-small-elems, $shadow-clicked;
+    text-shadow: $shadow-clicked-button;
   }
 }
 
@@ -42,16 +47,24 @@
 
 @mixin inputs {
   box-shadow: $shadow-small-elems;
-  padding: 0.5em;
+  padding: 1em;
   background-color: $grey-backgrounds;
   border-radius: 10px;
   border: none;
   width: 80%;
   color: $grey-light;
+  font-size: 12px;
+  font-family: $font-secondary;
   @include tablet {
     width: 60%;
+    font-size: 13px;
   }
   @include desktops {
     width: 50%;
+    font-size: 15px;
+  }
+
+  &:focus {
+    box-shadow: $shadow-small-elems, $shadow-clicked;
   }
 }

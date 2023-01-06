@@ -51,7 +51,7 @@
   }
   &-elem {
     width: 2em;
-    height: 2em;
+    height: 2.2em;
     @include button(0);
     cursor: pointer;
     position: relative;
@@ -64,9 +64,10 @@
   }
   &-icon {
     position: absolute;
-    top: 8px;
+    top: 50%;
     left: 8px;
     color: $grey-light;
+    transform: translateY(-50%);
   }
 }
 

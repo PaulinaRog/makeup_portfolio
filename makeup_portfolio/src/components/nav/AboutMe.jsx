@@ -11,6 +11,7 @@ export default function AboutMe() {
       borderRadius: 20,
       display: "flex",
       animation: "expand linear 0.5s",
+      textShadow: "none",
     });
     setSpanStyle({
       fontSize: 16,
@@ -18,7 +19,7 @@ export default function AboutMe() {
       position: "absolute",
       paddingTop: 8,
       animation: "appear ease-out 1s",
-      color: "#b2ab76",
+      color: "#929292",
     });
   };
 
@@ -35,10 +36,8 @@ export default function AboutMe() {
         className="nav-elem"
         style={style && style}
       >
-        <p>
-          <i className="fa-regular fa-user nav-icon"></i>
-          <span style={spanStyle}>ABOUT ME</span>
-        </p>
+        <i className="fa-regular fa-user nav-icon"></i>
+        <span style={spanStyle}>ABOUT ME</span>
       </button>
     </NavLink>
   );

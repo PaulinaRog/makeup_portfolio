@@ -4,7 +4,6 @@
   position: relative;
   left: 50%;
   top: 50%;
-  animation: circles-mob linear 1s;
   transform: translate(-50%, -50%);
   border: 3px solid $grey-backgrounds;
   box-shadow: $shadow-small-elems, $shadow-clicked;
@@ -12,28 +11,23 @@
   @include tablet {
     width: 60vw;
     height: 50vh;
-    animation: circles-tab linear 1s;
   }
   @include desktops {
     width: 40vw;
     height: 80vh;
-    animation: circles-desk linear 1s;
   }
 
   &-2 {
     @include boxes;
     width: calc(360px - 26vw);
     height: calc(740px - 34vh);
-    animation: circles2-mob linear 1.2s;
     @include tablet {
       width: 56vw;
       height: 48vh;
-      animation: circles2-tab linear 1.2s;
     }
     @include desktops {
       width: 38vw;
       height: 76vh;
-      animation: circles2-desk linear 1.2s;
     }
   }
 
@@ -41,16 +35,13 @@
     @include boxes;
     width: calc(360px - 32vw);
     height: calc(740px - 38vh);
-    animation: circles3-mob linear 1.4s;
     @include tablet {
       width: 52vw;
       height: 46vh;
-      animation: circles3-tab linear 1.4s;
     }
     @include desktops {
       width: 36vw;
       height: 72vh;
-      animation: circles3-desk linear 1.4s;
     }
   }
   &-4 {
@@ -77,8 +68,6 @@
   }
 
   &-form {
-    animation: appear linear 3s;
-
     @include tablet {
       padding-top: 2em;
     }
@@ -89,9 +78,8 @@
 
   &-label {
     color: $yellow-elements;
-    font-weight: 500;
     position: absolute;
-    top: 2.5em;
+    top: 2.6em;
     left: 1.5em;
   }
 
@@ -123,6 +111,27 @@
 
     @include desktops {
       width: 90%;
+    }
+  }
+
+  &-button {
+    @include button(0.5em 1em);
+    position: absolute;
+    right: 2em;
+    bottom: 1em;
+    color: $grey-transparent;
+  }
+
+  &-message-sent {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    animation: appear linear 3s;
+    @include tablet {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }

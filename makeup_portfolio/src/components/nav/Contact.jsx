@@ -11,6 +11,7 @@ export default function Contact() {
       borderRadius: 20,
       display: "flex",
       animation: "expand linear 0.5s",
+      textShadow: "none",
     });
     setSpanStyle({
       fontSize: 16,
@@ -18,7 +19,7 @@ export default function Contact() {
       position: "absolute",
       paddingTop: 10,
       animation: "appear ease-out 1s",
-      color: "#b2ab76",
+      color: "#929292",
     });
   };
 

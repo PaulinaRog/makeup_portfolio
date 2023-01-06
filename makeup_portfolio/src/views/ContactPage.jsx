@@ -6,23 +6,52 @@ export default function ContactPage() {
   const [style, setStyle] = useState(null);
   const [style2, setStyle2] = useState(null);
   const [style3, setStyle3] = useState(null);
+  const [screen, setScreen] = useState(null);
+  const [margin, setMargin] = useState(null);
+
+  const screenHeight = window.innerHeight;
+  const screenWidth = window.innerWidth;
 
   const handleClick = () => {
     setStyle({ animation: "label linear 0.5s", left: "1em", top: "0.75em" });
+    setScreen(
+      screenHeight <= 750 && screenWidth <= 500 ? { height: "150vh" } : null
+    );
+    setMargin(
+      screenHeight <= 750 && screenWidth <= 500
+        ? { top: "10%", transform: "translate(-50%)" }
+        : null
+    );
   };
 
   const handleClick2 = () => {
     setStyle2({ animation: "label linear 0.5s", left: "1em", top: "0.75em" });
+    setScreen(
+      screenHeight <= 750 && screenWidth <= 500 ? { height: "150vh" } : null
+    );
+    setMargin(
+      screenHeight <= 750 && screenWidth <= 500
+        ? { top: "10%", transform: "translate(-50%)" }
+        : null
+    );
   };
 
   const handleClick3 = () => {
     setStyle3({ animation: "label linear 0.5s", left: "1em", top: "0.75em" });
+    setScreen(
+      screenHeight <= 750 && screenWidth <= 500 ? { height: "150vh" } : null
+    );
+    setMargin(
+      screenHeight <= 750 && screenWidth <= 500
+        ? { top: "10%", transform: "translate(-50%)" }
+        : null
+    );
   };
 
   return (
-    <div className="index">
+    <div className="index" style={screen ? screen : null}>
       <LeftNav />
-      <div className="contact">
+      <div className="contact" style={margin ? margin : null}>
         <div className="contact-2">
           <div className="contact-3">
             <div className="contact-4">

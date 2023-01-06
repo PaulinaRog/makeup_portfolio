@@ -6,7 +6,9 @@
   top: 50%;
   animation: circles-mob linear 1s;
   transform: translate(-50%, -50%);
-  @include boxes;
+  border: 3px solid $grey-backgrounds;
+  box-shadow: $shadow-small-elems, $shadow-clicked;
+  border-radius: 2em;
   @include tablet {
     width: 60vw;
     height: 50vh;

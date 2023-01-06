@@ -61,6 +61,9 @@
     border-radius: 2em;
     width: 62vw;
     height: 58vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     @include tablet {
       width: 48vw;
       height: 44vh;
@@ -70,97 +73,55 @@
       height: 68vh;
     }
   }
-}
 
-@keyframes circles-mob {
-  from {
-    width: 80vw;
-    height: 70vh;
-  }
-  to {
-    width: 0;
-    height: 0;
-  }
-}
-@keyframes circles2-mob {
-  from {
-    width: 74vw;
-    height: 66vh;
-  }
-  to {
-    width: 0;
-    height: 0;
-  }
-}
-@keyframes circles3-mob {
-  from {
-    width: 68vw;
-    height: 62vh;
-  }
-  to {
-    width: 0;
-    height: 0;
-  }
-}
+  &-form {
+    animation: appear linear 3s;
 
-@keyframes circles-tab {
-  from {
-    width: 60vw;
-    height: 50vh;
+    @include tablet {
+      padding-top: 2em;
+    }
+    @include desktops {
+      padding-top: 1em;
+    }
   }
-  to {
-    width: 0;
-    height: 0;
-  }
-}
-@keyframes circles2-tab {
-  from {
-    width: 56vw;
-    height: 48vh;
-  }
-  to {
-    width: 0;
-    height: 0;
-  }
-}
-@keyframes circles3-tab {
-  from {
-    width: 52vw;
-    height: 46vh;
-  }
-  to {
-    width: 0;
-    height: 0;
-  }
-}
 
-@keyframes circles-desk {
-  from {
-    width: 40vw;
-    height: 80vh;
+  &-label {
+    color: $yellow-elements;
+    font-weight: 500;
+    position: absolute;
+    top: 2.5em;
+    left: 1.5em;
   }
-  to {
-    width: 0;
-    height: 0;
+
+  &-input {
+    @include inputs;
+
+    &-container {
+      display: grid;
+      padding: 2em 0 0.5em 1em;
+      position: relative;
+
+      @include tablet {
+        padding: 2em 0 1em 1em;
+      }
+
+      @include desktops {
+        margin-left: 1em;
+        padding: 2em 0 1em 1em;
+      }
+    }
   }
-}
-@keyframes circles2-desk {
-  from {
-    width: 38vw;
-    height: 76vh;
-  }
-  to {
-    width: 0;
-    height: 0;
-  }
-}
-@keyframes circles3-desk {
-  from {
-    width: 36vw;
-    height: 72vh;
-  }
-  to {
-    width: 0;
-    height: 0;
+
+  &-textarea {
+    @include inputs;
+    height: 5em;
+
+    @include tablet {
+      width: 90%;
+    }
+
+    @include desktops {
+      width: 90%;
+    }
   }
 }

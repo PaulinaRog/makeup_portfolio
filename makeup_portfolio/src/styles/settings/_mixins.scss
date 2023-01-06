@@ -39,3 +39,19 @@
   transform: translate(-50%, -50%);
   border-radius: 2em;
 }
+
+@mixin inputs {
+  box-shadow: $shadow-small-elems;
+  padding: 0.5em;
+  background-color: $grey-backgrounds;
+  border-radius: 10px;
+  border: none;
+  width: 80%;
+  color: $grey-light;
+  @include tablet {
+    width: 60%;
+  }
+  @include desktops {
+    width: 50%;
+  }
+}

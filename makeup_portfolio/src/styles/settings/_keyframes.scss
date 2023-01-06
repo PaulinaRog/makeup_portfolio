@@ -1,8 +1,150 @@
-@keyframes slideIn {
+// NAV
+
+@keyframes expand {
   from {
-    top: -100%;
+    width: 1.8em;
+    height: 1.8em;
+    box-shadow: $shadow-small-elems;
   }
   to {
-    top: 50%;
+    width: 170px;
+    color: $grey-light;
+  }
+}
+
+@keyframes appear {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  30% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  from {
+    width: 170px;
+    border-radius: 20px;
+  }
+  to {
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 30%;
+  }
+}
+
+// CONTACT PAGE
+
+// CONTAINERS
+
+@keyframes circles-mob {
+  from {
+    width: 80vw;
+    height: 70vh;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+@keyframes circles2-mob {
+  from {
+    width: 74vw;
+    height: 66vh;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+@keyframes circles3-mob {
+  from {
+    width: 68vw;
+    height: 62vh;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes circles-tab {
+  from {
+    width: 60vw;
+    height: 50vh;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+@keyframes circles2-tab {
+  from {
+    width: 56vw;
+    height: 48vh;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+@keyframes circles3-tab {
+  from {
+    width: 52vw;
+    height: 46vh;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes circles-desk {
+  from {
+    width: 40vw;
+    height: 80vh;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+@keyframes circles2-desk {
+  from {
+    width: 38vw;
+    height: 76vh;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+@keyframes circles3-desk {
+  from {
+    width: 36vw;
+    height: 72vh;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+
+// INPUTS
+
+@keyframes label {
+  from {
+    top: 2.5em;
+    left: 1.5em;
+  }
+  to {
+    top: 0.75em;
+    left: 1em;
   }
 }

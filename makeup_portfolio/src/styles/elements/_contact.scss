@@ -1,6 +1,6 @@
 .contact {
-  width: 80vw;
-  height: 70vh;
+  width: calc(360px - 20vw);
+  height: calc(740px - 30vh);
   position: relative;
   left: 50%;
   top: 50%;
@@ -20,8 +20,8 @@
 
   &-2 {
     @include boxes;
-    width: 74vw;
-    height: 66vh;
+    width: calc(360px - 26vw);
+    height: calc(740px - 34vh);
     animation: circles2-mob linear 1.2s;
     @include tablet {
       width: 56vw;
@@ -37,8 +37,8 @@
 
   &-3 {
     @include boxes;
-    width: 68vw;
-    height: 62vh;
+    width: calc(360px - 32vw);
+    height: calc(740px - 38vh);
     animation: circles3-mob linear 1.4s;
     @include tablet {
       width: 52vw;
@@ -59,8 +59,8 @@
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 2em;
-    width: 62vw;
-    height: 58vh;
+    width: calc(360px - 38vw);
+    height: calc(740px - 42vh);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -106,7 +106,6 @@
       }
 
       @include desktops {
-        margin-left: 1em;
         padding: 2em 0 1em 1em;
       }
     }

@@ -2,7 +2,10 @@ body {
   font-family: $font-headers;
   box-sizing: border-box;
   color: $grey-light;
-  font-size: 20px;
+  font-size: 16px;
+  @include desktops {
+    font-size: 20px;
+  }
 }
 
 h1 {

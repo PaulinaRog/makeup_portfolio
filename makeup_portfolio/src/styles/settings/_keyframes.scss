@@ -45,8 +45,8 @@
 
 @keyframes circles-mob {
   from {
-    width: 80vw;
-    height: 70vh;
+    width: calc(360px - 20vw);
+    height: calc(740px - 30vh);
   }
   to {
     width: 0;
@@ -55,8 +55,8 @@
 }
 @keyframes circles2-mob {
   from {
-    width: 74vw;
-    height: 66vh;
+    width: calc(360px - 26vw);
+    height: calc(740px - 34vh);
   }
   to {
     width: 0;
@@ -65,8 +65,8 @@
 }
 @keyframes circles3-mob {
   from {
-    width: 68vw;
-    height: 62vh;
+    width: calc(360px - 32vw);
+    height: calc(740px - 38vh);
   }
   to {
     width: 0;

@@ -51,12 +51,17 @@
     }
   }
   &-elem {
-    width: 1.8em;
-    height: 1.8em;
+    width: 2em;
+    height: 2em;
     @include button(0);
     cursor: pointer;
     position: relative;
     box-shadow: $shadow-small-elems;
+
+    @include desktops {
+      width: 1.8em;
+      height: 1.8em;
+    }
   }
   &-icon {
     position: absolute;

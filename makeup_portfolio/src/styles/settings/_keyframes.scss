@@ -199,7 +199,7 @@
     transform: translate(-50%, -50%);
   }
   to {
-    top: 0;
+    top: 100%;
     width: 70%;
     left: 100%;
     opacity: 0;
@@ -238,6 +238,22 @@
   }
 }
 
+@keyframes photo-change-back3 {
+  from {
+    top: 100%;
+    width: 70%;
+    left: 100%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    top: 50%;
+    width: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 @keyframes slidein {
   from {
     left: 100vw;
@@ -271,5 +287,10 @@
   }
   to {
     left: 100vh;
+  }
+}
+
+@keyframes changeHeight {
+  from {
   }
 }

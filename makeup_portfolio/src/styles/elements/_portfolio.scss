@@ -14,7 +14,7 @@
 
   &-button-prev {
     @include button(0.5em 1em);
-    position: fixed;
+    position: absolute;
     left: 3em;
     bottom: 4em;
     @include desktops {
@@ -26,7 +26,7 @@
 
   &-button-next {
     @include button(0.5em 1em);
-    position: fixed;
+    position: absolute;
     right: 3em;
     bottom: 4em;
 
@@ -37,18 +37,21 @@
   }
 
   &-pages-nav {
-    position: fixed;
+    position: absolute;
     bottom: 2em;
-    right: 50%;
+    left: 50%;
     display: flex;
     gap: 5px;
-    transform: translateZ(-50%);
+    transform: translateX(-50%);
 
     @include desktops {
       top: 50%;
       right: 1em;
+      left: unset;
       flex-direction: column;
       gap: 0.5em;
+      transform: translateY(-50%);
+      bottom: unset;
     }
 
     &-dot {
@@ -72,6 +75,10 @@
     top: 15%;
     transform: translateX(-50%);
     z-index: 4;
+
+    @include tablet {
+      width: 70%;
+    }
 
     @include desktops {
       width: 40%;
@@ -102,18 +109,56 @@
   }
 
   &-title {
+    text-align: center;
+    @include desktops {
+      margin-bottom: 1em;
+      text-align: unset;
+    }
+  }
+
+  &-info {
     position: absolute;
-    bottom: 6em;
-    width: 70%;
+    bottom: 22%;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
+    height: fit-content;
+    padding: 1em;
+    z-index: 10;
+
+    @include tablet {
+      bottom: 15%;
+    }
+
     @include desktops {
-      top: 20%;
-      right: 10%;
-      width: 20%;
+      transform: unset;
+      position: absolute;
+      top: 10%;
+      right: 8%;
+      width: 22%;
       bottom: unset;
       left: unset;
-      transform: unset;
+      height: 60%;
+      background-image: none;
+      box-shadow: none;
+    }
+  }
+
+  &-arrow {
+    @include button(0.5em);
+    margin-bottom: 1em;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    @include desktops {
+      display: none;
+    }
+  }
+
+  &-desc {
+    display: none;
+    @include desktops {
+      display: block;
     }
   }
 }

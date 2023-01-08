@@ -6,7 +6,7 @@ import Img2 from "../assets/2.png";
 import Img3 from "../assets/3.png";
 import Img4 from "../assets/4.png";
 import { useEffect } from "react";
-import supabase from "../services/SupabaseClient";
+import supabase from "../services/supabaseClient";
 import ImgInfo from "../components/pages/ImgInfo";
 
 export default function PortfolioPage() {

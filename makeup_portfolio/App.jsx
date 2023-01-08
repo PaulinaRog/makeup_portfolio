@@ -14,7 +14,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="aboutme" element={<AboutMePage />} />
-          <Route path="portfolio" element={<PortfolioPage />} />
+          <Route path="portfolio" element={<PortfolioPage />}>
+            <Route path=":id" element={<PortfolioPage />} />
+          </Route>
           <Route path="contact" element={<ContactPage />} />
         </Routes>
       </BrowserRouter>

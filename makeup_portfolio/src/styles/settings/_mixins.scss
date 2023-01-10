@@ -24,14 +24,18 @@
   border: none;
   background-color: $grey-backgrounds;
   font-family: $font-headers;
-  color: $grey-transparent;
+  color: black;
+  text-shadow: $shadow-text;
+  font-weight: 500;
+  outline: 2px solid rgb(31, 31, 31);
+  outline-offset: 3px;
 
   &:hover {
     color: $yellow-elements;
+    text-shadow: none;
   }
   &:active {
     box-shadow: $shadow-small-elems, $shadow-clicked;
-    text-shadow: $shadow-clicked-button;
   }
 }
 

@@ -7,12 +7,20 @@
 
   &-photo {
     background-image: url(../assets/aboutMeGosia.png);
-    width: 40vw;
-    height: 96vh;
+    width: 25vw;
+    height: 70vh;
     background-repeat: no-repeat;
     position: absolute;
-    left: 25%;
-    top: 2%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 1em;
+    outline: 5px solid rgba(26, 26, 26, 0.57);
+    outline-style: ridge;
+    box-shadow: -30px -30px 60px rgba(172, 172, 172, 0.1),
+      30px 30px 60px rgba(0, 0, 0, 0.5);
 
     // &-second {
     //   background-image: url(../assets/aboutMe.png);
@@ -25,48 +33,75 @@
     // }
   }
 
-  &-moving-elem {
-    width: 30vw;
-    height: 96vh;
+  &-moving {
+    width: 40vw;
+    height: 90vh;
     position: absolute;
-    top: 2%;
-    left: 7%;
-    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 42%;
     background-color: $grey-bg-transparent;
     background-image: $background;
     box-shadow: $shadow-small-elems;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    border-radius: 1em 0 0 1em;
   }
 
-  &-moving-elem2 {
-    width: 20vw;
-    height: 96vh;
+  &-moving-elem {
+    width: 10vw;
+    height: 90vh;
     position: absolute;
-    top: 2%;
-    right: 0%;
-    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 31%;
+    z-index: 1;
     background-color: $grey-bg-transparent;
     background-image: $background;
     box-shadow: $shadow-small-elems;
   }
-  &-moving-elem3 {
-    width: 20vw;
-    height: 96vh;
+
+  &-moving-elem2 {
+    width: 10vw;
+    height: 90vh;
     position: absolute;
-    top: 2%;
-    left: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20%;
     z-index: 2;
     background-color: $grey-bg-transparent;
     background-image: $background;
     box-shadow: $shadow-small-elems;
   }
+  &-moving-elem3 {
+    width: 10vw;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 9%;
+    z-index: 3;
+    background-color: $grey-bg-transparent;
+    background-image: $background;
+    box-shadow: $shadow-small-elems;
+    border-radius: 0 1em 1em 0;
+  }
 
   &-title {
-    width: 220px;
-    text-align: right;
     padding: 1em;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    font-weight: 500;
+    color: black;
+    text-shadow: $shadow-text;
+    font-size: 30px;
+    cursor: pointer;
+
+    &:hover {
+      font-weight: 300;
+      color: $yellow-elements;
+    }
   }
 }
 

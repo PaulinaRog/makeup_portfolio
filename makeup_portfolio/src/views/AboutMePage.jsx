@@ -3,25 +3,21 @@ import { useState } from "react";
 import LeftNav from "../components/nav/LeftNav";
 
 export default function AboutMePage() {
-  const [style, setStyle] = useState(null);
-
-  const handleClick = () => {
-    setStyle({ animation: "move linear 1s", left: "53%" });
-  };
-
   return (
     <div className="aboutme">
       <LeftNav />
-      <div className="aboutme-photo"></div>
-      <div
-        className="aboutme-moving-elem"
-        style={style ? style : null}
-        onClick={handleClick}
-      >
-        <h1 className="aboutme-title">ABOUT ME</h1>
+      <div className="aboutme-moving">
+        <div className="aboutme-photo"></div>
       </div>
-      <div className="aboutme-moving-elem2"></div>
-      <div className="aboutme-moving-elem3"></div>
+      <div className="aboutme-moving-elem">
+        <span className="aboutme-title">lorem ipsum</span>
+      </div>
+      <div className="aboutme-moving-elem2">
+        <span className="aboutme-title">dolor sit</span>
+      </div>
+      <div className="aboutme-moving-elem3">
+        <span className="aboutme-title">about me</span>
+      </div>
     </div>
   );
 }

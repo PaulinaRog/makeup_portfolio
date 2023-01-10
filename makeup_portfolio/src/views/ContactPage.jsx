@@ -12,6 +12,7 @@ export default function ContactPage() {
   const [container3, setContainer3] = useState(null);
   const [form, setForm] = useState(null);
   const [text, setText] = useState(null);
+  const [info, setInfo] = useState({ display: "none" });
   const timeout = () => {
     setTimeout(() => {
       setForm({ animation: "appear linear 1s" });
@@ -103,6 +104,22 @@ export default function ContactPage() {
     timeout();
   };
 
+  const handleShowInfo = (e) => {
+    e.preventDefault();
+    if (screenWidth <= 460) {
+      setContainer({ display: "none" });
+      setInfo({ display: "flex" });
+    }
+  };
+
+  const handleShowForm = (e) => {
+    e.preventDefault();
+    if (screenWidth <= 460) {
+      setContainer({ display: "flex" });
+      setInfo({ display: "none" });
+    }
+  };
+
   return (
     <div className="index" style={screen ? screen : null}>
       <LeftNav />
@@ -153,12 +170,39 @@ export default function ContactPage() {
                   className="contact-button"
                   onClick={handleSubmit}
                 >
-                  Send
+                  send
                 </button>
               </form>
             </div>
           </div>
         </div>
+      </div>
+      <button
+        className="contact-button2"
+        onClick={handleShowForm}
+        style={screenWidth > 460 ? { display: "none" } : null}
+      >
+        contact form
+      </button>
+      <button
+        className="contact-button"
+        onClick={handleShowInfo}
+        style={screenWidth > 460 ? { display: "none" } : null}
+      >
+        contact info
+      </button>
+      <div className="contact-info" style={screenWidth <= 460 ? info : null}>
+        <h3>lorem ipsum</h3>
+        <div className="contact-decor"></div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          praesentium aliquid, incidunt ducimus aperiam velit quos natus
+          accusantium voluptatum rem optio sequi nesciunt at dignissimos ut est
+          dolorem similique non!
+        </p>
+        <div className="contact-decor"></div>
+        <p>mob: 123 456 789</p>
+        <p>e-mail: user@user.com</p>
       </div>
     </div>
   );

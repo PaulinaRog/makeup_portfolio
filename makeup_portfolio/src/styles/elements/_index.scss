@@ -4,6 +4,8 @@
   height: 100vh;
   position: relative;
   background-image: $background;
+  background-position: center;
+  background-size: cover;
   &-container {
     width: 80vw;
     height: 52vh;
@@ -22,7 +24,7 @@
       width: 30vw;
       height: 80vh;
       top: 10vh;
-      left: 42vw;
+      left: 50vw;
     }
   }
 
@@ -48,10 +50,11 @@
     @include desktops {
       z-index: 5;
       position: absolute;
-      top: 40vh;
+      top: 35vh;
       width: 20%;
       text-align: right;
       left: 20%;
+      font-size: 28px;
     }
   }
 }

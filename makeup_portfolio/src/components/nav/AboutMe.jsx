@@ -11,7 +11,6 @@ export default function AboutMe() {
       borderRadius: 20,
       display: "flex",
       animation: "expand linear 0.5s",
-      textShadow: "none",
     });
     setSpanStyle({
       fontSize: 16,
@@ -19,7 +18,6 @@ export default function AboutMe() {
       position: "absolute",
       paddingTop: 8,
       animation: "appear ease-out 1s",
-      color: "#929292",
     });
   };
 

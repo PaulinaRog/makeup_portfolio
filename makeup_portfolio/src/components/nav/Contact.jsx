@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Contact() {
   const [style, setStyle] = useState(null);
@@ -11,7 +11,6 @@ export default function Contact() {
       borderRadius: 20,
       display: "flex",
       animation: "expand linear 0.5s",
-      textShadow: "none",
     });
     setSpanStyle({
       fontSize: 16,
@@ -19,7 +18,6 @@ export default function Contact() {
       position: "absolute",
       paddingTop: 10,
       animation: "appear ease-out 1s",
-      color: "#929292",
     });
   };
 
@@ -31,7 +29,7 @@ export default function Contact() {
   return (
     <>
       <NavLink to="/contact">
-        <div
+        <button
           onMouseOver={handleMouseEnterUser}
           onMouseLeave={handleMouseLeaveUser}
           className="nav-elem"
@@ -42,7 +40,7 @@ export default function Contact() {
 
             <span style={spanStyle}>CONTACT</span>
           </p>
-        </div>
+        </button>
       </NavLink>
     </>
   );

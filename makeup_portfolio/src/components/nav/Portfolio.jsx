@@ -11,7 +11,6 @@ export default function Portfolio() {
       borderRadius: 20,
       display: "flex",
       animation: "expand linear 0.5s",
-      textShadow: "none",
     });
     setSpanStyle({
       fontSize: 16,
@@ -19,7 +18,6 @@ export default function Portfolio() {
       position: "absolute",
       paddingTop: 10,
       animation: "appear ease-out 1s",
-      color: "#929292",
     });
   };
 
@@ -30,7 +28,7 @@ export default function Portfolio() {
 
   return (
     <NavLink to="/portfolio">
-      <div
+      <button
         onMouseOver={handleMouseEnterUser}
         onMouseLeave={handleMouseLeaveUser}
         className="nav-elem"
@@ -41,7 +39,7 @@ export default function Portfolio() {
 
           <span style={spanStyle}>PORTFOLIO</span>
         </p>
-      </div>
+      </button>
     </NavLink>
   );
 }

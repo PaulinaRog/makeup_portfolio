@@ -11,10 +11,12 @@
   @include tablet {
     width: 60vw;
     height: 50vh;
+    top: 35%;
   }
   @include desktops {
     width: 40vw;
     height: 80vh;
+    left: 37%;
   }
 
   &-2 {
@@ -119,24 +121,86 @@
     position: absolute;
     right: 2em;
     bottom: 1em;
-    color: $grey-transparent;
   }
 
   &-message-sent {
     position: absolute;
     top: 50%;
-    left: 25%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     animation: appear linear 3s;
+    width: 120px;
     @include tablet {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      width: unset;
     }
     @include desktops {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      width: unset;
     }
+  }
+
+  &-info {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include tablet {
+      left: 35%;
+      bottom: 10%;
+      width: 30vw;
+      top: unset;
+      transform: unset;
+    }
+
+    @include desktops {
+      right: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25vw;
+      left: unset;
+    }
+    h3 {
+      color: $yellow-elements;
+      font-size: 27px;
+      @include desktops {
+        color: $yellow-elements;
+        font-size: 27px;
+      }
+    }
+  }
+  &-decor {
+    height: 1px;
+    width: 200px;
+    background-color: $yellow-elements;
+    margin: 1em;
+    @include desktops {
+      height: 1px;
+      width: 200px;
+      background-color: $yellow-elements;
+      margin: 1em;
+    }
+  }
+
+  &-button {
+    @include button(0.5em 1em);
+    bottom: 2em;
+  }
+  &-button2 {
+    @include button(0.5em 1em);
+    position: absolute;
+    bottom: 2em;
+    left: 2em;
   }
 }

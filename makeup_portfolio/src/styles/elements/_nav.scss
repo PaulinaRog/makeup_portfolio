@@ -66,8 +66,8 @@
     position: absolute;
     top: 50%;
     left: 8px;
-    color: $grey-light;
     transform: translateY(-50%);
+    font-weight: 600;
   }
 }
 
@@ -79,7 +79,6 @@
   }
   to {
     width: 170px;
-    color: $grey-light;
   }
 }
 

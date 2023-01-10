@@ -22,11 +22,14 @@
   &-bg {
     background-color: $grey-backgrounds;
     width: 100%;
-    height: 110vh;
+    height: 120vh;
     position: relative;
     background-image: $background;
     background-position: center;
     background-size: cover;
+    @include desktops {
+      height: 100vh;
+    }
   }
 
   &-2 {

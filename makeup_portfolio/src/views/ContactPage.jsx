@@ -35,7 +35,7 @@ export default function ContactPage() {
       ? setScreen({ height: "120vh" })
       : null;
     screenHeight <= 750 && screenWidth <= 500
-      ? setScreen({ height: "120vh" })
+      ? setScreen({ height: "150vh" })
       : null;
     screenHeight <= 1600 && screenWidth <= 960
       ? setContainer({ top: "20%", transform: "translate(-50%)" })
@@ -51,7 +51,7 @@ export default function ContactPage() {
       ? setScreen({ height: "120vh" })
       : null;
     screenHeight <= 750 && screenWidth <= 500
-      ? setScreen({ height: "120vh" })
+      ? setScreen({ height: "150vh" })
       : null;
     screenHeight <= 1600 && screenWidth <= 960
       ? setContainer({ top: "20%", transform: "translate(-50%)" })
@@ -67,7 +67,7 @@ export default function ContactPage() {
       ? setScreen({ height: "120vh" })
       : null;
     screenHeight <= 750 && screenWidth <= 500
-      ? setScreen({ height: "120vh" })
+      ? setScreen({ height: "150vh" })
       : null;
     screenHeight <= 1600 && screenWidth <= 960
       ? setContainer({ top: "20%", transform: "translate(-50%)" })
@@ -109,6 +109,7 @@ export default function ContactPage() {
     if (screenWidth <= 460) {
       setContainer({ display: "none" });
       setInfo({ display: "flex" });
+      setScreen({ height: "100vh" });
     }
   };
 
@@ -117,6 +118,7 @@ export default function ContactPage() {
     if (screenWidth <= 460) {
       setContainer({ display: "flex" });
       setInfo({ display: "none" });
+      setScreen({ height: "110vh" });
     }
   };
 

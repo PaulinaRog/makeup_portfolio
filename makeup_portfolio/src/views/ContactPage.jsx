@@ -29,7 +29,8 @@ export default function ContactPage() {
   const screenHeight = window.innerHeight;
   const screenWidth = window.innerWidth;
 
-  const handleClick = () => {
+  const handleFocus = (e) => {
+    e.preventDefault();
     setStyle({ animation: "label linear 0.5s", left: "1em", top: "0.75em" });
     screenHeight <= 1600 && screenWidth <= 960
       ? setScreen({ height: "120vh" })
@@ -45,7 +46,12 @@ export default function ContactPage() {
       : null;
   };
 
-  const handleClick2 = () => {
+  const handleBlur = () => {
+    setScreen(null);
+    setContainer(null);
+  };
+
+  const handleFocus2 = () => {
     setStyle2({ animation: "label linear 0.5s", left: "1em", top: "0.75em" });
     screenHeight <= 1600 && screenWidth <= 960
       ? setScreen({ height: "120vh" })
@@ -61,7 +67,7 @@ export default function ContactPage() {
       : null;
   };
 
-  const handleClick3 = () => {
+  const handleFocus3 = () => {
     setStyle3({ animation: "label linear 0.5s", left: "1em", top: "0.75em" });
     screenHeight <= 1600 && screenWidth <= 960
       ? setScreen({ height: "120vh" })
@@ -84,7 +90,7 @@ export default function ContactPage() {
       visibility: "hidden",
       opacity: 0,
     });
-    setScreen({ height: "100vh" });
+    setScreen({ height: "120vh" });
     if (screenWidth <= 460) {
       setContainer({ animation: "circles-mob linear 0.5s" });
       setContainer2({ animation: "circles2-mob linear 1s" });
@@ -138,7 +144,8 @@ export default function ContactPage() {
                   <input
                     type="text"
                     className="contact-input"
-                    onClick={handleClick}
+                    onBlur={handleBlur}
+                    onFocus={handleFocus}
                   />
                 </div>
                 <div className="contact-input-container">
@@ -151,7 +158,8 @@ export default function ContactPage() {
                   <input
                     type="text"
                     className="contact-input"
-                    onClick={handleClick2}
+                    onBlur={handleBlur}
+                    onFocus={handleFocus2}
                   />
                 </div>
                 <div className="contact-input-container">
@@ -164,7 +172,8 @@ export default function ContactPage() {
                   <textarea
                     type="text"
                     className="contact-textarea textarea"
-                    onClick={handleClick3}
+                    onFocus={handleFocus3}
+                    onBlur={handleBlur}
                   />
                 </div>
                 <button

@@ -13,6 +13,7 @@ export default function ContactPage() {
   const [form, setForm] = useState(null);
   const [text, setText] = useState(null);
   const [info, setInfo] = useState({ display: "none" });
+  const [disabled, setDisabled] = useState(false);
   const timeout = () => {
     setTimeout(() => {
       setForm({ animation: "appear linear 1s" });
@@ -23,6 +24,7 @@ export default function ContactPage() {
       setContainer(null);
       setContainer2(null);
       setContainer3(null);
+      setDisabled(false);
     }, [7000]);
   };
 
@@ -85,6 +87,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setDisabled(true);
     setForm({
       animation: "disappear linear 0.2s",
       visibility: "hidden",
@@ -197,6 +200,7 @@ export default function ContactPage() {
           contact form
         </button>
         <button
+          disabled={disabled}
           className="contact-buttons"
           onClick={handleShowInfo}
           style={screenWidth > 460 ? { display: "none" } : null}

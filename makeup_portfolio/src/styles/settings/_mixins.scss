@@ -37,6 +37,11 @@
   &:active {
     box-shadow: $shadow-small-elems, $shadow-clicked;
   }
+  &:disabled {
+    color: black;
+    box-shadow: $shadow-small-elems;
+    text-shadow: $shadow-text;
+  }
 }
 
 @mixin boxes {

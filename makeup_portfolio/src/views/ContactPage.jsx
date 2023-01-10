@@ -118,7 +118,6 @@ export default function ContactPage() {
     if (screenWidth <= 460) {
       setContainer({ display: "none" });
       setInfo({ display: "flex" });
-      setScreen({ height: "100vh" });
     }
   };
 
@@ -127,7 +126,6 @@ export default function ContactPage() {
     if (screenWidth <= 460) {
       setContainer({ display: "flex" });
       setInfo({ display: "none" });
-      setScreen({ height: "110vh" });
     }
   };
 

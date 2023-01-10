@@ -1,6 +1,6 @@
 .contact {
-  width: calc(360px - 20vw);
-  height: calc(740px - 30vh);
+  width: 320px;
+  height: 520px;
   position: relative;
   left: 50%;
   top: 50%;
@@ -21,8 +21,8 @@
 
   &-2 {
     @include boxes;
-    width: calc(360px - 26vw);
-    height: calc(740px - 34vh);
+    width: 290px;
+    height: 490px;
     @include tablet {
       width: 56vw;
       height: 48vh;
@@ -35,8 +35,8 @@
 
   &-3 {
     @include boxes;
-    width: calc(360px - 32vw);
-    height: calc(740px - 38vh);
+    width: 260px;
+    height: 460px;
     @include tablet {
       width: 52vw;
       height: 46vh;
@@ -54,8 +54,8 @@
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 2em;
-    width: calc(360px - 38vw);
-    height: calc(740px - 42vh);
+    width: 230px;
+    height: 430px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

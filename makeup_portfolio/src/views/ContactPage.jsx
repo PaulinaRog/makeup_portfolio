@@ -121,7 +121,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="index" style={screen ? screen : null}>
+    <div className="contact-bg" style={screen ? screen : null}>
       <LeftNav />
       <div className="contact" style={container ? container : null}>
         <div className="contact-2" style={container2 ? container2 : null}>
@@ -177,20 +177,22 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-      <button
-        className="contact-button2"
-        onClick={handleShowForm}
-        style={screenWidth > 460 ? { display: "none" } : null}
-      >
-        contact form
-      </button>
-      <button
-        className="contact-button"
-        onClick={handleShowInfo}
-        style={screenWidth > 460 ? { display: "none" } : null}
-      >
-        contact info
-      </button>
+      <div className="contact-buttons-container">
+        <button
+          className="contact-buttons"
+          onClick={handleShowForm}
+          style={screenWidth > 460 ? { display: "none" } : null}
+        >
+          contact form
+        </button>
+        <button
+          className="contact-buttons"
+          onClick={handleShowInfo}
+          style={screenWidth > 460 ? { display: "none" } : null}
+        >
+          contact info
+        </button>
+      </div>
       <div className="contact-info" style={screenWidth <= 460 ? info : null}>
         <h3>lorem ipsum</h3>
         <div className="contact-decor"></div>

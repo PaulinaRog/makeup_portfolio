@@ -93,11 +93,11 @@ export default function ContactPage() {
       visibility: "hidden",
       opacity: 0,
     });
-    setScreen({ height: "120vh" });
     if (screenWidth <= 460) {
       setContainer({ animation: "circles-mob linear 0.5s" });
       setContainer2({ animation: "circles2-mob linear 1s" });
       setContainer3({ animation: "circles3-mob linear 1.5s" });
+      setScreen({ height: "120vh" });
     }
     if (screenWidth <= 960 && screenWidth >= 461) {
       setContainer({ animation: "circles-tab linear 0.8s" });

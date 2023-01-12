@@ -63,6 +63,9 @@
   font-size: 12px;
   font-family: $font-secondary;
   -webkit-box-shadow: $shadow-small-elems;
+  -moz-box-shadow: $shadow-small-elems;
+  -webkit-appearance: none;
+  height: 1.2em;
   @include tablet {
     width: 60%;
     font-size: 13px;
@@ -75,5 +78,6 @@
   &:focus {
     box-shadow: $shadow-small-elems, $shadow-clicked;
     -webkit-box-shadow: $shadow-small-elems, $shadow-clicked;
+    -moz-box-shadow: $shadow-small-elems, $shadow-clicked;
   }
 }

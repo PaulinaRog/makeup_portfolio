@@ -7,8 +7,8 @@
 
   &-photo {
     background-image: url(../assets/aboutMeGosia.png);
-    width: 25vw;
-    height: 70vh;
+    width: 250px;
+    height: 40vh;
     background-repeat: no-repeat;
     position: absolute;
     left: 50%;
@@ -20,82 +20,139 @@
     box-shadow: -30px -30px 60px rgba(172, 172, 172, 0.1),
       30px 30px 60px rgba(0, 0, 0, 0.5);
 
-    // &-second {
-    //   background-image: url(../assets/aboutMe.png);
-    //   width: 40vw;
-    //   height: 90vh;
-    //   background-repeat: no-repeat;
-    //   position: absolute;
-    //   right: 7%;
-    //   top: 5%;
-    // }
+    @include tablet {
+      width: 50vw;
+    }
+    @include desktops {
+      width: 25vw;
+      height: 70vh;
+    }
   }
 
   &-moving {
-    width: 40vw;
-    height: 90vh;
+    width: 90vw;
+    height: 50vh;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 42%;
+    top: 10%;
+    transform: translateX(-50%);
+    left: 50%;
     background-color: $grey-bg-transparent;
     background-image: $background;
     box-shadow: $shadow-small-elems;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    border-radius: 1em 0 0 1em;
+    border-radius: 1em 1em 0 0;
+
+    @include desktops {
+      width: 40vw;
+      height: 90vh;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 42%;
+      left: unset;
+      border-radius: 1em 0 0 1em;
+      display: unset;
+    }
   }
 
   &-moving-elem {
-    width: 10vw;
-    height: 90vh;
+    width: 90vw;
+    height: 10vh;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 31%;
+    top: calc(50vh + 20px + 10%);
+    transform: translateX(-50%);
+    left: 50%;
     z-index: 1;
     background-color: $grey-bg-transparent;
     background-image: $background;
     box-shadow: $shadow-small-elems;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include desktops {
+      width: 10vw;
+      height: 90vh;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 31%;
+      left: unset;
+      display: unset;
+    }
   }
 
   &-moving-elem2 {
-    width: 10vw;
-    height: 90vh;
+    width: 90vw;
+    height: 10vh;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20%;
+    top: calc(60vh + 40px + 10%);
+    transform: translateX(-50%);
+    left: 50%;
     z-index: 2;
     background-color: $grey-bg-transparent;
     background-image: $background;
     box-shadow: $shadow-small-elems;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include desktops {
+      width: 10vw;
+      height: 90vh;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20%;
+      left: unset;
+      display: unset;
+    }
   }
   &-moving-elem3 {
-    width: 10vw;
-    height: 90vh;
+    width: 90vw;
+    height: 10vh;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 9%;
+    top: calc(70vh + 60px + 10%);
+    transform: translateX(-50%);
+    left: 50%;
     z-index: 3;
     background-color: $grey-bg-transparent;
     background-image: $background;
     box-shadow: $shadow-small-elems;
-    border-radius: 0 1em 1em 0;
+    border-radius: 0 0 1em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include desktops {
+      width: 10vw;
+      height: 90vh;
+      top: 50%;
+      left: unset;
+      transform: translateY(-50%);
+      right: 9%;
+      display: unset;
+    }
   }
 
   &-title {
     padding: 1em;
-    text-orientation: upright;
-    writing-mode: vertical-lr;
     font-weight: 500;
     color: black;
     text-shadow: $shadow-text;
-    font-size: 30px;
+    font-size: 1.2em;
     cursor: pointer;
 
+    @include desktops {
+      padding: 1em;
+      text-orientation: upright;
+      writing-mode: vertical-lr;
+      font-weight: 500;
+      color: black;
+      text-shadow: $shadow-text;
+      font-size: 30px;
+      cursor: pointer;
+    }
     &:hover {
       font-weight: 300;
       color: $yellow-elements;

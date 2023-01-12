@@ -119,6 +119,7 @@
   &-textarea {
     @include inputs;
     height: 5em;
+    resize: none;
 
     @include tablet {
       width: 90%;

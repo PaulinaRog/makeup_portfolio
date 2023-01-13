@@ -290,7 +290,20 @@
   }
 }
 
+@keyframes changeWidth {
+  from {
+    width: 10vw;
+  }
+  to {
+    width: 40vw;
+  }
+}
+
 @keyframes changeHeight {
   from {
+    height: 10vh;
+  }
+  to {
+    height: 50vh;
   }
 }

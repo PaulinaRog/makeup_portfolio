@@ -16,7 +16,7 @@ export default function Portfolio() {
       fontSize: 16,
       paddingLeft: "3em",
       position: "absolute",
-      paddingTop: 10,
+      paddingTop: 8,
       animation: "appear ease-out 1s",
     });
   };

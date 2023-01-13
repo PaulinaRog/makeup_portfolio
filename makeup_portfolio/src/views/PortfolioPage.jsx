@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import LeftNav from "../components/nav/LeftNav";
-import PagesNav from "../components/pages/PagesNav";
 import Img1 from "../assets/1.png";
 import Img2 from "../assets/2.png";
 import Img3 from "../assets/3.png";
@@ -15,7 +14,7 @@ export default function PortfolioPage() {
   const [prevStyle, setPrevStyle] = useState({ display: "block" });
   const [nextStyle, setNextStyle] = useState({ display: "block" });
   const [style, setStyle] = useState(null);
-  const [style2, setStyle2] = useState(null);
+  const [style2, setStyle2] = useState({ display: "none" });
   const [style3, setStyle3] = useState({ display: "none" });
   const [prev, setPrev] = useState(null);
   const [next, setNext] = useState(null);
@@ -41,9 +40,11 @@ export default function PortfolioPage() {
     currentPage >= 2 && setPrevStyle({ display: "block" });
     currentPage === list.length && setNextStyle({ display: "none" });
     currentPage === list.length - 1 && setNextStyle({ display: "block" });
+    if (screenWidth > 960) {
+      setStyle2(null);
+    }
 
     if (screenWidth <= 960) {
-      setStyle2({ display: "none" });
       setTimeout(() => {
         setStyle(null);
         setTextStyle(null);
@@ -137,11 +138,6 @@ export default function PortfolioPage() {
           {info && <ImgInfo textStyle={textStyle} info={info} />}
         </>
       )}
-      <PagesNav
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-        setNum={setNum}
-      />
       <button
         onClick={handleClick}
         className="portfolio-button-next"

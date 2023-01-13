@@ -6,6 +6,11 @@ import { createRoot } from "react-dom/client";
 import AboutMePage from "./src/views/AboutMePage";
 import PortfolioPage from "./src/views/PortfolioPage";
 import ContactPage from "./src/views/ContactPage";
+import Login from "./src/views/Login";
+import Dashboard from "./src/views/Dashboard";
+import AboutMeSettings from "./src/components/settings/AboutMeSettings";
+import PortfolioSettings from "./src/components/settings/PortfolioSettings";
+import ContactSettings from "./src/components/settings/ContactSettings";
 
 export default function App() {
   return (
@@ -18,6 +23,12 @@ export default function App() {
             <Route path=":id" element={<PortfolioPage />} />
           </Route>
           <Route path="contact" element={<ContactPage />} />
+          <Route path="login" element={<Login />} />
+          <Route path="dashboard" element={<Dashboard />}>
+            <Route path="aboutmeset" element={<AboutMeSettings />} />
+            <Route path="portfolioset" element={<PortfolioSettings />} />
+            <Route path="contactset" element={<ContactSettings />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

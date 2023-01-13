@@ -32,6 +32,17 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 120%;
+  color: $yellow-elements;
+  @include tablet {
+    font-size: 120%;
+  }
+  @include desktops {
+    font-size: 150%;
+  }
+}
+
 a {
   color: $grey-light;
   text-decoration: none;
@@ -63,4 +74,14 @@ span {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.text-error {
+  color: red;
+  font-size: 14px;
+}
+
+.text-ok {
+  color: greenyellow;
+  font-size: 14px;
 }

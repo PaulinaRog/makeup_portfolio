@@ -1,6 +1,8 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import LeftNav from "../components/nav/LeftNav";
+import supabase from "../services/supabaseClient";
 
 export default function ContactPage() {
   const [style, setStyle] = useState(null);
@@ -27,9 +29,26 @@ export default function ContactPage() {
       setDisabled(false);
     }, [7000]);
   };
+  const [data, setData] = useState(null);
 
   const screenHeight = window.innerHeight;
   const screenWidth = window.innerWidth;
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data, error } = await supabase
+        .from("contact")
+        .select("*")
+        .single();
+      if (error) {
+        console.log(error);
+      }
+      if (data) {
+        setData(data);
+      }
+    };
+    getData();
+  }, []);
 
   const handleFocus = (e) => {
     e.preventDefault();
@@ -115,7 +134,7 @@ export default function ContactPage() {
 
   const handleShowInfo = (e) => {
     e.preventDefault();
-    if (screenWidth <= 460) {
+    if (screenWidth <= 560) {
       setContainer({ display: "none" });
       setInfo({ display: "flex" });
     }
@@ -123,7 +142,7 @@ export default function ContactPage() {
 
   const handleShowForm = (e) => {
     e.preventDefault();
-    if (screenWidth <= 460) {
+    if (screenWidth <= 560) {
       setContainer({ display: "flex" });
       setInfo({ display: "none" });
     }
@@ -193,7 +212,7 @@ export default function ContactPage() {
         <button
           className="contact-buttons"
           onClick={handleShowForm}
-          style={screenWidth > 460 ? { display: "none" } : null}
+          style={screenWidth > 560 ? { display: "none" } : null}
         >
           contact form
         </button>
@@ -201,24 +220,21 @@ export default function ContactPage() {
           disabled={disabled}
           className="contact-buttons"
           onClick={handleShowInfo}
-          style={screenWidth > 460 ? { display: "none" } : null}
+          style={screenWidth > 560 ? { display: "none" } : null}
         >
           contact info
         </button>
       </div>
-      <div className="contact-info" style={screenWidth <= 460 ? info : null}>
-        <h3>lorem ipsum</h3>
-        <div className="contact-decor"></div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
-          praesentium aliquid, incidunt ducimus aperiam velit quos natus
-          accusantium voluptatum rem optio sequi nesciunt at dignissimos ut est
-          dolorem similique non!
-        </p>
-        <div className="contact-decor"></div>
-        <p>mob: 123 456 789</p>
-        <p>e-mail: user@user.com</p>
-      </div>
+      {data && (
+        <div className="contact-info" style={screenWidth <= 560 ? info : null}>
+          <h3>{data.title}</h3>
+          <div className="contact-decor"></div>
+          <p>{data.description}</p>
+          <div className="contact-decor"></div>
+          <p>mob: {data.phone}</p>
+          <p>e-mail: {data.email}</p>
+        </div>
+      )}
     </div>
   );
 }

@@ -132,6 +132,7 @@
       transform: translateY(-50%);
       right: 9%;
       display: unset;
+      border-radius: 0 1em 1em 0;
     }
   }
 
@@ -161,6 +162,41 @@
       font-weight: 300;
       color: $yellow-elements;
     }
+  }
+
+  &-content1 {
+    width: 95%;
+    font-size: 14px;
+    text-align: center;
+
+    @include desktops {
+      width: 80%;
+      font-size: 16px;
+    }
+  }
+
+  &-decor {
+    height: 1px;
+    width: 200px;
+    background-color: $yellow-elements;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    @include desktops {
+      height: 1px;
+      width: 400px;
+      background-color: $yellow-elements;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+  }
+
+  &-photo2 {
+    width: 60%;
+    margin-bottom: 1em;
   }
 }
 

@@ -62,7 +62,7 @@ export default function ContactSettings() {
         style={{ position: "absolute", top: "2em", left: "2em" }}
         onClick={handleBack}
       >
-        go back to dashboard
+        back to dashboard
       </button>
       {
         <form className="settings-content2">

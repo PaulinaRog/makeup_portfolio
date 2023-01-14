@@ -14,7 +14,7 @@ h1 {
   text-shadow: 2px 2px 4px black;
   font-family: $font-headers;
   @include tablet {
-    font-size: 200%;
+    font-size: 250%;
   }
   @include desktops {
     font-size: 300%;

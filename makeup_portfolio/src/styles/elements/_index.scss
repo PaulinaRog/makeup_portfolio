@@ -7,8 +7,8 @@
   background-position: center;
   background-size: cover;
   &-container {
-    width: 80vw;
-    height: 52vh;
+    width: 290px;
+    height: 380px;
     position: relative;
     left: 10vw;
     top: 30vh;
@@ -29,11 +29,21 @@
   }
 
   &-photo {
-    width: 90%;
-    height: auto;
     position: absolute;
     right: -20px;
     bottom: -20px;
+    width: 270px;
+    height: 360px;
+    object-fit: cover;
+    object-position: center center;
+    @include tablet {
+      width: 90%;
+      height: auto;
+    }
+    @include desktops {
+      width: 90%;
+      height: auto;
+    }
   }
 
   &-header {

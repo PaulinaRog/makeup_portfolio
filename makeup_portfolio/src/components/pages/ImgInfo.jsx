@@ -15,7 +15,11 @@ export default function ImgInfo({
   const handleClick = (e) => {
     e.preventDefault();
     if (screenWidth < 960) {
-      setBoxStyle({ zIndex: 10, backgroundColor: "#2c2c2cad" });
+      setBoxStyle({
+        zIndex: 10,
+        backgroundImage: "linear-gradient(#92929234 0%, #2c2c2cad 100%)",
+        backdropFilter: "blur(4px)",
+      });
       setStyle({ display: "block", padding: "2em" });
       setButton1({ display: "none" });
       setButton2({ display: "block" });

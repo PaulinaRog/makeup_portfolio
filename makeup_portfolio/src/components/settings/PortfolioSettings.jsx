@@ -94,7 +94,7 @@ export default function PortfolioSettings() {
         style={{ position: "absolute", top: "2em", left: "2em" }}
         onClick={handleBack}
       >
-        go back to dashboard
+        back to dashboard
       </button>
       <div className="settings-content">
         <p>portfolio</p>

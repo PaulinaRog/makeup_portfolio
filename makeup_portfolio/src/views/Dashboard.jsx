@@ -12,6 +12,7 @@ export default function Dashboard() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [isLogged, setIsLogged] = useState(false);
+  const screenWidth = window.innerWidth;
 
   useEffect(() => {
     const isUserLogged = async () => {
@@ -72,56 +73,61 @@ export default function Dashboard() {
 
   return (
     <>
-      {isLogged && (
-        <div className="dashboard">
-          {pathname === "/dashboard" ? (
-            <>
-              <button
-                className="dashboard-button"
-                onClick={handleNavigate}
-                style={{
-                  position: "absolute",
-                  left: "4em",
-                  top: "2em",
-                  width: 200,
-                }}
-              >
-                back to login
-              </button>
-              <button
-                className="dashboard-button"
-                onClick={handleLogOut}
-                style={{
-                  position: "absolute",
-                  left: "4em",
-                  top: "6em",
-                  width: 200,
-                }}
-              >
-                log out
-              </button>
-              <div className="dashboard-content">
-                <h3>settings</h3>
+      <div className="dashboard">
+        {isLogged && (
+          <>
+            {pathname === "/dashboard" ? (
+              <>
                 <button
                   className="dashboard-button"
-                  onClick={handleClickAboutMe}
+                  onClick={handleNavigate}
+                  style={{
+                    position: "absolute",
+                    left: "4em",
+                    top: "2em",
+                    width: 200,
+                  }}
                 >
-                  about me
+                  log in page
                 </button>
-                <button className="dashboard-button" onClick={handlePortfolio}>
-                  portfolio
+                <button
+                  className="dashboard-button"
+                  onClick={handleLogOut}
+                  style={{
+                    position: "absolute",
+                    left: "4em",
+                    top: "6em",
+                    width: 200,
+                  }}
+                >
+                  log out
                 </button>
-                <button className="dashboard-button" onClick={handleContact}>
-                  contact
-                </button>
-              </div>
-            </>
-          ) : null}
-          {pathname.includes("aboutmeset") ? <AboutMeSettings /> : null}
-          {pathname.includes("portfolioset") ? <PortfolioSettings /> : null}
-          {pathname.includes("contactset") ? <ContactSettings /> : null}
-        </div>
-      )}
+                <div className="dashboard-content">
+                  <h3>settings</h3>
+                  <button
+                    className="dashboard-button"
+                    onClick={handleClickAboutMe}
+                  >
+                    about me
+                  </button>
+                  <button
+                    className="dashboard-button"
+                    onClick={handlePortfolio}
+                  >
+                    portfolio
+                  </button>
+                  <button className="dashboard-button" onClick={handleContact}>
+                    contact
+                  </button>
+                </div>
+              </>
+            ) : null}
+            {pathname.includes("aboutmeset") ? <AboutMeSettings /> : null}
+            {pathname.includes("portfolioset") ? <PortfolioSettings /> : null}
+            {pathname.includes("contactset") ? <ContactSettings /> : null}
+          </>
+        )}
+      </div>
     </>
   );
 }

@@ -32,7 +32,7 @@ export default function LeftNav() {
           <a href="https://facebook.com">
             <i className="fa-brands fa-facebook-f links-icon"></i>
           </a>
-          <a href="https://instagram.com">
+          <a href="https://www.instagram.com/gosiamay.mua/">
             <i className="fa-brands fa-instagram links-icon"></i>
           </a>
         </div>

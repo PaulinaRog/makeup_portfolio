@@ -1,22 +1,21 @@
 $font-headers: "Montserrat", sans-serif;
 $font-secondary: "Lato", sans-serif;
 
-$grey-backgrounds: #2c2c2c;
-$yellow-elements: #b2ab76;
-$grey-light: #929292;
+$grey-backgrounds: #767676;
+$yellow-elements: #dadada;
+$grey-light: #aaaaaa;
 $grey-transparent: #92929263;
-$yellow-active-link: #c5b95e;
+$yellow-active-link: #afafaf;
 $grey-bg-transparent: #2c2c2cad;
-$yellow-clicked-button: #ffe731;
+$yellow-clicked-button: #ffffff;
 $background: url(../assets/background-small-noise.jpg);
 $grey-semi: #92929234;
 
 $mobile-width: 460px;
 $tablet-width: 960px;
 
-$shadow-small-elems: 5px 5px 10px 0 #0d0d0dcd, -2px -2px 5px 0 #a1a1a14b;
+$shadow-small-elems: 5px 5px 10px 0 #0d0d0d82, -2px -2px 5px 0 #a1a1a1;
 $shadow-yellow-elems: 5px 5px 10px 0 #0d0d0dcd, -2px -2px 10px 0 #a1a1a189;
-$shadow-clicked: inset 5px 5px 10px 0 #0d0d0dcd,
-  inset -2px -2px 10px 0 #a1a1a189;
-$shadow-clicked-button: -3px -3px 4px #ffe73165, 3px 3px 4px #ffe7317e;
+$shadow-clicked: inset 5px 5px 10px 0 #0d0d0d82, inset -2px -2px 10px 0 #a1a1a1;
+$shadow-clicked-button: -3px -3px 4px #ffffff65, 3px 3px 4px #ffffff7e;
 $shadow-text: 1px 1px 2px rgba(255, 255, 255, 0.262);

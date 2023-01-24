@@ -6,6 +6,7 @@
   // background-image: $background;
   background-position: center;
   background-size: cover;
+
   &-container {
     width: 290px;
     height: 380px;
@@ -14,15 +15,16 @@
     top: 30vh;
     border: 3px solid $grey-backgrounds;
     box-shadow: $shadow-small-elems, $shadow-clicked;
+
     @include tablet {
       top: 25vh;
-      height: 60vh;
+      height: 80vw;
       width: 65vw;
       left: 25vw;
     }
     @include desktops {
       width: 30vw;
-      height: 80vh;
+      height: 38vw;
       top: 10vh;
       left: 50vw;
     }

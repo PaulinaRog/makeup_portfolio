@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import LeftNav from "../components/nav/LeftNav";
 import supabase from "../services/supabaseClient";
+import emailjs from "emailjs-com";
 
 export default function ContactPage() {
   const [style, setStyle] = useState(null);
@@ -49,6 +50,23 @@ export default function ContactPage() {
     };
     getData();
   }, []);
+
+  const [nameErr, setNameErr] = useState(false);
+  const [mailErr, setMailErr] = useState(false);
+  const [messageErr, setMessageErr] = useState(false);
+
+  const formRef = useRef();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    mail: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  };
 
   const handleFocus = (e) => {
     e.preventDefault();
@@ -106,30 +124,62 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setDisabled(true);
-    setForm({
-      animation: "disappear linear 0.2s",
-      visibility: "hidden",
-      opacity: 0,
-    });
-    if (screenWidth <= 460) {
-      setContainer({ animation: "circles-mob linear 0.5s" });
-      setContainer2({ animation: "circles2-mob linear 1s" });
-      setContainer3({ animation: "circles3-mob linear 1.5s" });
-      setScreen({ height: "120vh" });
+
+    if (formData.name.length <= 2 || !formData.mail.includes("@")) {
+      console.log("błąd");
+      setNameErr(formData.name.length <= 2);
+      setMailErr(!formData.mail.includes("@"));
+    } else {
+      emailjs
+        .sendForm(
+          "service_h8zlfga",
+          "template_8i6bzje",
+          formRef.current,
+          "napJ2b_t5_GuPFTBu"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setFormData((prev) => ({
+              ...prev,
+              name: "",
+              mail: "",
+              message: "",
+            }));
+            setNameErr("");
+            setMailErr("");
+            setMessageErr("");
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+
+      setDisabled(true);
+      setForm({
+        animation: "disappear linear 0.2s",
+        visibility: "hidden",
+        opacity: 0,
+      });
+      if (screenWidth <= 460) {
+        setContainer({ animation: "circles-mob linear 0.5s" });
+        setContainer2({ animation: "circles2-mob linear 1s" });
+        setContainer3({ animation: "circles3-mob linear 1.5s" });
+        setScreen({ height: "120vh" });
+      }
+      if (screenWidth <= 960 && screenWidth >= 461) {
+        setContainer({ animation: "circles-tab linear 0.8s" });
+        setContainer2({ animation: "circles2-tab linear 1.2s" });
+        setContainer3({ animation: "circles3-tab linear 1.7s" });
+      }
+      if (screenWidth > 960) {
+        setContainer({ animation: "circles-desk linear 1s" });
+        setContainer2({ animation: "circles2-desk linear 1.2s" });
+        setContainer3({ animation: "circles3-desk linear 1.4s" });
+      }
+      setText("message sent!");
+      timeout();
     }
-    if (screenWidth <= 960 && screenWidth >= 461) {
-      setContainer({ animation: "circles-tab linear 0.8s" });
-      setContainer2({ animation: "circles2-tab linear 1.2s" });
-      setContainer3({ animation: "circles3-tab linear 1.7s" });
-    }
-    if (screenWidth > 960) {
-      setContainer({ animation: "circles-desk linear 1s" });
-      setContainer2({ animation: "circles2-desk linear 1.2s" });
-      setContainer3({ animation: "circles3-desk linear 1.4s" });
-    }
-    setText("message sent!");
-    timeout();
   };
 
   const handleShowInfo = (e) => {
@@ -156,7 +206,11 @@ export default function ContactPage() {
           <div className="contact-3" style={container3 ? container3 : null}>
             <div className="contact-4">
               {text ? <p className="contact-message-sent">{text}</p> : null}
-              <form className="contact-form" style={form ? form : null}>
+              <form
+                className="contact-form"
+                style={form ? form : null}
+                ref={formRef}
+              >
                 <div className="contact-input-container">
                   <label className="contact-label" style={style ? style : null}>
                     name
@@ -166,7 +220,16 @@ export default function ContactPage() {
                     className="contact-input"
                     onBlur={handleBlur}
                     onFocus={handleFocus}
+                    name="from_name"
+                    value={formData.name}
+                    id="name"
+                    onChange={handleChange}
                   />
+                  {nameErr ? (
+                    <p className="text-error" style={{ marginTop: 10 }}>
+                      Name is too short!
+                    </p>
+                  ) : null}
                 </div>
                 <div className="contact-input-container">
                   <label
@@ -180,7 +243,16 @@ export default function ContactPage() {
                     className="contact-input"
                     onBlur={handleBlur}
                     onFocus={handleFocus2}
+                    name="reply_to"
+                    value={formData.mail}
+                    id="mail"
+                    onChange={handleChange}
                   />
+                  {mailErr ? (
+                    <p className="text-error" style={{ marginTop: 10 }}>
+                      Wrong e-mail format
+                    </p>
+                  ) : null}
                 </div>
                 <div className="contact-input-container">
                   <label
@@ -194,7 +266,12 @@ export default function ContactPage() {
                     className="contact-textarea textarea"
                     onFocus={handleFocus3}
                     onBlur={handleBlur}
+                    name="message"
+                    value={formData.message}
+                    id="message"
+                    onChange={handleChange}
                   />
+                  {messageErr ? <p>Message is too short!</p> : null}
                 </div>
                 <button
                   type="submit"

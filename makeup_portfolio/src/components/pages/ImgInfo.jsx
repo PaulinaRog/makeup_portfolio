@@ -17,7 +17,7 @@ export default function ImgInfo({
     if (screenWidth < 960) {
       setBoxStyle({
         zIndex: 10,
-        backgroundImage: "linear-gradient(#92929234 0%, #2c2c2cad 100%)",
+        backgroundImage: "linear-gradient(#393939aa 0%, #84848486 100%)",
         backdropFilter: "blur(4px)",
       });
       setStyle({ display: "block", padding: "2em" });

@@ -3,7 +3,7 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  // background-image: $background;
+  background-image: $background;
   background-position: center;
   background-size: cover;
 
@@ -89,6 +89,7 @@
     &-small {
       font-family: $font-headers;
       text-align: right;
+      font-weight: 300;
       @include desktops {
         text-align: center;
       }

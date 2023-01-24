@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import LeftNav from "../components/nav/LeftNav";
-import Img1 from "../assets/aboutMe.png";
+import Img1 from "../assets/gosia_main.png";
 import { useEffect } from "react";
 import supabase from "../services/supabaseClient";
 

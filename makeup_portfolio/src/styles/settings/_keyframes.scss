@@ -307,3 +307,14 @@
     height: 50vh;
   }
 }
+
+@keyframes light {
+  from {
+    box-shadow: -100px 100px 200px rgb(255 255 255 / 40%),
+      150px -150px 200px rgb(0 0 0 / 40%);
+  }
+  to {
+    box-shadow: 100px -100px 200px rgb(255 255 255 / 40%),
+      -150px 150px 200px rgb(0 0 0 / 40%);
+  }
+}

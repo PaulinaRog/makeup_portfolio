@@ -14,7 +14,8 @@
     left: 10vw;
     top: 30vh;
     border: 3px solid $grey-backgrounds;
-    box-shadow: $shadow-small-elems, $shadow-clicked;
+    // box-shadow: $shadow-small-elems, $shadow-clicked;
+    animation: light 3s alternate infinite;
 
     @include tablet {
       top: 25vh;
@@ -34,17 +35,24 @@
     position: absolute;
     right: -20px;
     bottom: -20px;
+    // transform: translate(-50%, -50%);
     width: 270px;
     height: 360px;
     object-fit: cover;
     object-position: center center;
+    box-shadow: 50px -50px 100px rgba(255, 255, 255, 0.3),
+      -50px 50px 100px rgba(0, 0, 0, 0.3);
     @include tablet {
-      width: 90%;
-      height: auto;
+      width: 88%;
+      height: 90%;
+      box-shadow: 100px -100px 150px rgba(255, 255, 255, 0.3),
+        -100px 100px 150px rgba(0, 0, 0, 0.3);
     }
     @include desktops {
-      width: 90%;
-      height: auto;
+      width: 88%;
+      height: 90%;
+      box-shadow: 100px -100px 200px rgb(255 255 255 / 30%),
+        -150px 150px 200px rgb(0 0 0 / 30%);
     }
   }
 

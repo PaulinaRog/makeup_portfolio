@@ -1,6 +1,6 @@
 import React from "react";
 import LeftNav from "../components/nav/LeftNav";
-import Gosia from "../assets/gosia_main.png";
+import Gosia from "../assets/3.jpg";
 
 export default function Index() {
   return (

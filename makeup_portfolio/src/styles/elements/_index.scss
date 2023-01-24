@@ -14,20 +14,21 @@
     left: 10vw;
     top: 30vh;
     border: 3px solid $grey-backgrounds;
-    // box-shadow: $shadow-small-elems, $shadow-clicked;
-    animation: light 3s alternate infinite;
+    animation: light-mob 3s alternate infinite;
 
     @include tablet {
       top: 25vh;
       height: 80vw;
       width: 65vw;
       left: 25vw;
+      animation: light-tab 3s alternate infinite;
     }
     @include desktops {
       width: 30vw;
       height: 38vw;
       top: 10vh;
       left: 50vw;
+      animation: light 3s alternate infinite;
     }
   }
 
@@ -35,7 +36,6 @@
     position: absolute;
     right: -20px;
     bottom: -20px;
-    // transform: translate(-50%, -50%);
     width: 270px;
     height: 360px;
     object-fit: cover;

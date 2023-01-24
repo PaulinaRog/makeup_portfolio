@@ -318,3 +318,25 @@
       -150px 150px 200px rgb(0 0 0 / 40%);
   }
 }
+
+@keyframes light-mob {
+  from {
+    box-shadow: -50px 50px 100px rgba(255, 255, 255, 0.3),
+      50px -50px 100px rgba(0, 0, 0, 0.3);
+  }
+  to {
+    box-shadow: 50px -50px 100px rgba(255, 255, 255, 0.3),
+      -50px 50px 100px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes light-tab {
+  from {
+    box-shadow: -100px 100px 150px rgba(255, 255, 255, 0.3),
+      100px -100px 150px rgba(0, 0, 0, 0.3);
+  }
+  to {
+    box-shadow: 100px -100px 150px rgba(255, 255, 255, 0.3),
+      -100px 100px 150px rgba(0, 0, 0, 0.3);
+  }
+}

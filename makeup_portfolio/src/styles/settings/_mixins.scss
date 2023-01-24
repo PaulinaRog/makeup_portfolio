@@ -33,7 +33,7 @@
     text-shadow: none;
   }
   &:active {
-    box-shadow: $shadow-small-elems, $shadow-clicked;
+    box-shadow: $shadow-clicked;
   }
   &:disabled {
     color: black;
@@ -76,8 +76,8 @@
   }
 
   &:focus {
-    box-shadow: $shadow-small-elems, $shadow-clicked;
-    -webkit-box-shadow: $shadow-small-elems, $shadow-clicked;
-    -moz-box-shadow: $shadow-small-elems, $shadow-clicked;
+    box-shadow: $shadow-clicked;
+    -webkit-box-shadow: $shadow-clicked;
+    -moz-box-shadow: $shadow-clicked;
   }
 }

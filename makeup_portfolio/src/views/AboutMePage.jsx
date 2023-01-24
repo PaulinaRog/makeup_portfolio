@@ -56,7 +56,7 @@ export default function AboutMePage() {
     setElem2(null);
     setElem3(null);
     setElem4(null);
-    setContent1({ animation: "appear linear 2s" });
+    setContent1({ animation: "appear linear 3s" });
     setContent2({ display: "none" });
     setContent3({ display: "none" });
     setContent4({ display: "none" });
@@ -91,7 +91,7 @@ export default function AboutMePage() {
     setSpan1({ display: "block" });
     setContent1({ display: "none" });
     setSpan2({ display: "none" });
-    setContent2({ display: "block", animation: "appear linear 2s" });
+    setContent2({ display: "block", animation: "appear linear 3s" });
   };
 
   const handleClick3 = (e) => {
@@ -118,7 +118,7 @@ export default function AboutMePage() {
     setSpan1({ display: "block" });
     setContent1({ display: "none" });
     setSpan3({ display: "none" });
-    setContent3({ display: "block", animation: "appear linear 2s" });
+    setContent3({ display: "block", animation: "appear linear 3s" });
     setSpan2(null);
     setContent2({ display: "none" });
     setElem4(null);
@@ -149,7 +149,7 @@ export default function AboutMePage() {
         animation: "changeWidth linear 1s",
       });
     }
-    setContent4({ display: "block", animation: "appear linear 2s" });
+    setContent4({ display: "block", animation: "appear linear 3s" });
     setSpan1({ display: "block" });
     setContent1({ display: "none" });
     setSpan2(null);

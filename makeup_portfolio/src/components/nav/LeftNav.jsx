@@ -22,14 +22,18 @@ export default function LeftNav() {
       <div className="nav">
         <div className="nav-page">
           <NavLink to="/">
-            <h2>G</h2>
+            <h2
+              style={{ fontFamily: '"pirulen", sans-serif', fontWeight: 200 }}
+            >
+              G
+            </h2>
           </NavLink>
           <AboutMe />
           <Portfolio />
           <Contact />
         </div>
         <div className="nav-sm" style={style}>
-          <a href="https://facebook.com">
+          <a href="https://facebook.com/gosiamay.mua/">
             <i className="fa-brands fa-facebook-f links-icon"></i>
           </a>
           <a href="https://www.instagram.com/gosiamay.mua/">

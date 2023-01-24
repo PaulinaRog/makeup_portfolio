@@ -13,9 +13,12 @@ export default function Index() {
           </div>
           <div className="index-header">
             <h1 className="index-header-title">GOSIA MAY</h1>
-            <p>MAKEUP ARTIST</p>
+            <p className="index-header-small">MAKEUP ARTIST</p>
           </div>
         </>
+        <a href="https://github.com/PaulinaRog" className="madeby">
+          made by Paulina Róg
+        </a>
       </div>
     </>
   );

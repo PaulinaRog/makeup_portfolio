@@ -170,13 +170,13 @@
     align-items: center;
     text-align: center;
 
-    @include tablet {
-      left: 35%;
-      bottom: 10%;
-      width: 30vw;
-      top: unset;
-      transform: unset;
-    }
+    // @include tablet {
+    //   left: 35%;
+    //   bottom: 10%;
+    //   width: 30vw;
+    //   top: unset;
+    //   transform: unset;
+    // }
 
     @include desktops {
       right: 10%;

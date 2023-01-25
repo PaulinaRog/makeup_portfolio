@@ -49,6 +49,10 @@ export default function ContactPage() {
       }
     };
     getData();
+
+    if (screenHeight < 500) {
+      setScreen({ height: "150vh" });
+    }
   }, []);
 
   const [nameErr, setNameErr] = useState(false);
@@ -86,7 +90,11 @@ export default function ContactPage() {
   };
 
   const handleBlur = () => {
-    setScreen(null);
+    if (screenHeight < 500) {
+      setScreen({ height: "150vh" });
+    } else {
+      setScreen(null);
+    }
     setContainer(null);
   };
 
@@ -161,13 +169,13 @@ export default function ContactPage() {
         visibility: "hidden",
         opacity: 0,
       });
-      if (screenWidth <= 460) {
+      if (screenWidth <= 560) {
         setContainer({ animation: "circles-mob linear 0.5s" });
         setContainer2({ animation: "circles2-mob linear 1s" });
         setContainer3({ animation: "circles3-mob linear 1.5s" });
         setScreen({ height: "120vh" });
       }
-      if (screenWidth <= 960 && screenWidth >= 461) {
+      if (screenWidth <= 960 && screenWidth >= 561) {
         setContainer({ animation: "circles-tab linear 0.8s" });
         setContainer2({ animation: "circles2-tab linear 1.2s" });
         setContainer3({ animation: "circles3-tab linear 1.7s" });
@@ -184,7 +192,7 @@ export default function ContactPage() {
 
   const handleShowInfo = (e) => {
     e.preventDefault();
-    if (screenWidth <= 560) {
+    if (screenWidth <= 960) {
       setContainer({ display: "none" });
       setInfo({ display: "flex" });
     }
@@ -192,7 +200,7 @@ export default function ContactPage() {
 
   const handleShowForm = (e) => {
     e.preventDefault();
-    if (screenWidth <= 560) {
+    if (screenWidth <= 960) {
       setContainer({ display: "flex" });
       setInfo({ display: "none" });
     }
@@ -289,7 +297,7 @@ export default function ContactPage() {
         <button
           className="contact-buttons"
           onClick={handleShowForm}
-          style={screenWidth > 560 ? { display: "none" } : null}
+          style={screenWidth > 960 ? { display: "none" } : null}
         >
           contact form
         </button>
@@ -297,13 +305,13 @@ export default function ContactPage() {
           disabled={disabled}
           className="contact-buttons"
           onClick={handleShowInfo}
-          style={screenWidth > 560 ? { display: "none" } : null}
+          style={screenWidth > 960 ? { display: "none" } : null}
         >
           contact info
         </button>
       </div>
       {data && (
-        <div className="contact-info" style={screenWidth <= 560 ? info : null}>
+        <div className="contact-info" style={screenWidth <= 960 ? info : null}>
           <h3>{data.title}</h3>
           <div className="contact-decor"></div>
           <p>{data.description}</p>

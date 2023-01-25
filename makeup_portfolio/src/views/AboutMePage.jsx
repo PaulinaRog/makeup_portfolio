@@ -18,10 +18,12 @@ export default function AboutMePage() {
   const [content2, setContent2] = useState({ display: "none" });
   const [content3, setContent3] = useState({ display: "none" });
   const [content4, setContent4] = useState({ display: "none" });
+  const [screen, setScreen] = useState(null);
 
   const [data, setData] = useState(null);
 
   const screenWidth = window.innerWidth;
+  const screenheight = window.innerHeight;
 
   useEffect(() => {
     const getData = async () => {
@@ -37,6 +39,10 @@ export default function AboutMePage() {
       }
     };
     getData();
+
+    if (screenheight < 500) {
+      setScreen({ height: "115vh" });
+    }
   }, []);
 
   const handleClick1 = (e) => {
@@ -60,6 +66,9 @@ export default function AboutMePage() {
     setContent2({ display: "none" });
     setContent3({ display: "none" });
     setContent4({ display: "none" });
+    if (screenheight < 500) {
+      setContent1({ animation: "appear linear 3s", fontSize: 10 });
+    }
   };
 
   const handleClick2 = (e) => {
@@ -92,6 +101,9 @@ export default function AboutMePage() {
     setContent1({ display: "none" });
     setSpan2({ display: "none" });
     setContent2({ display: "block", animation: "appear linear 3s" });
+    if (screenheight < 500) {
+      setContent2({ animation: "appear linear 3s", fontSize: 10 });
+    }
   };
 
   const handleClick3 = (e) => {
@@ -124,6 +136,9 @@ export default function AboutMePage() {
     setElem4(null);
     setSpan4(null);
     setContent4({ display: "none" });
+    if (screenheight < 500) {
+      setContent3({ animation: "appear linear 3s", fontSize: 10 });
+    }
   };
 
   const handleClick4 = (e) => {
@@ -157,11 +172,14 @@ export default function AboutMePage() {
     setContent3({ display: "none" });
     setSpan3(null);
     setSpan4({ display: "none" });
+    if (screenheight < 500) {
+      setContent4({ animation: "appear linear 3s", fontSize: 10 });
+    }
   };
 
   return (
     <>
-      <div className="aboutme">
+      <div className="aboutme" style={screen ? screen : null}>
         <LeftNav />
         {data && (
           <>
